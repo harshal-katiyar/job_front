@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import {MetaData} from '../components/MetaData'
 import {useDispatch, useSelector} from 'react-redux'
 import {getAppliedJob} from '../actions/ApplicationActions'
-import {Loader} from '../components/Loader'
+//import {Loader} from '../components/Loader'
 import { AppliedJobCard } from '../components/AppliedJobCard'
 import { Link } from 'react-router-dom'
 
@@ -65,3 +65,4 @@ export const AppliedJobs = () => {
     </>
   )
 }
+
