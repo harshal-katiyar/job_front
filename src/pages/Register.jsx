@@ -5,7 +5,7 @@ import { MdPermIdentity, MdOutlineFeaturedPlayList } from 'react-icons/md'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
 import { Link, useNavigate } from 'react-router-dom'
-import { TbLoader2 } from 'react-icons/tb'
+//import { TbLoader2 } from 'react-icons/tb'
 import { registerUser } from '../actions/UserActions'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -208,3 +208,4 @@ export const Register = () => {
     </>
   )
 }
+
