@@ -47,7 +47,7 @@ export const ViewAllJobAdmin = () => {
 
         <>
 
-          {loading ? <Loader /> :
+          /* {loading ? <Loader /> : */
             <div>
 
               <div className="pt-1 fixed left-0 z-20 pl-0">
@@ -133,7 +133,7 @@ export const ViewAllJobAdmin = () => {
               </div>
 
 
-            </div>}
+            </div>
         </>
 
       </div>
@@ -142,4 +142,5 @@ export const ViewAllJobAdmin = () => {
     </>
   )
 }
+
 
