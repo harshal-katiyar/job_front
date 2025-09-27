@@ -1,6 +1,7 @@
 import React from 'react';
-import MetaData from '../components/MetaData'; // ✅ check path
-import Loader from '../components/Loader';     // ✅ check path
+import { Link } from 'react-router-dom';
+import MetaData from '../components/MetaData'; 
+import Loader from '../components/Loader';     
 
 export const SavedJobs = ({ savedJobs = [], loading }) => {
   return (
@@ -23,7 +24,17 @@ export const SavedJobs = ({ savedJobs = [], loading }) => {
               </div>
             ) : (
               savedJobs.map((job, index) => (
-                <div key={job?._id || index} className="mb-4 p-4 bg-gray-800 rounded">
+                <div 
+                  key={job?._id || index} 
+                  className="mb-4 p-4 bg-gray-800 rounded shadow-sm shadow-gray-700"
+                >
+                  {job?.companyLogo?.url && (
+                    <img 
+                      src={job.companyLogo.url} 
+                      alt={job.companyName || "Company Logo"} 
+                      className="w-12 h-12 mb-2"
+                    />
+                  )}
                   <h2 className="text-xl font-semibold">
                     {job?.title || "Untitled Job"}
                   </h2>
@@ -33,7 +44,21 @@ export const SavedJobs = ({ savedJobs = [], loading }) => {
                   <p className="text-sm text-gray-400">
                     {job?.location || "Unknown Location"}
                   </p>
-                  {/* ✅ You can also add Apply/View Details button */}
+
+                  <div className="flex gap-3 mt-3">
+                    <Link 
+                      to={`/details/${job?._id}`} 
+                      className="blueCol px-3 py-1 text-sm rounded"
+                    >
+                      View Details
+                    </Link>
+                    <button 
+                      onClick={() => console.log("Apply clicked for", job?._id)}
+                      className="bg-green-600 px-3 py-1 text-sm rounded"
+                    >
+                      Apply
+                    </button>
+                  </div>
                 </div>
               ))
             )}
