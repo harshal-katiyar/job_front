@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllJobsAdmin, getAllUsersAdmin, getAllAppAdmin } from '../actions/AdminActions'
 import CountUp from 'react-countup';
 import {BarChart} from '../components/Chart'
-import { Loader } from '../components/Loader'
+//import { Loader } from '../components/Loader'
 
 export const Dashboard = () => {
 
@@ -92,3 +92,4 @@ export const Dashboard = () => {
     </>
   )
 }
+
