@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { MetaData } from '../components/MetaData'
 import { FiSearch } from 'react-icons/fi'
-//import { Loader } from '../components/Loader'
+import { Loader } from '../components/Loader'
 import { JobCard } from '../components/JobCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllJobs, getSingleJob } from '../actions/JobActions'
@@ -204,4 +204,5 @@ export const JobsLayout = () => {
     </>
   )
 }
+
 
