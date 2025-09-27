@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { MetaData } from '../components/MetaData'
 import { useDispatch, useSelector } from 'react-redux'
 import { AiOutlineUnlock, AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
-import { TbLoader2 } from 'react-icons/tb'
+//import { TbLoader2 } from 'react-icons/tb'
 import { deleteAccount } from '../actions/UserActions'
 import { Checkbox } from '@mantine/core';
 import { useNavigate } from 'react-router'
@@ -99,3 +99,4 @@ export const DeleteAccount = () => {
         </>
     )
 }
+
