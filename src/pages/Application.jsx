@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-// import { TbLoader2 } from 'react-icons/tb'
-// import { Loader } from '../components/Loader'
+ import { TbLoader2 } from 'react-icons/tb'
+import { Loader } from '../components/Loader'
 import { useParams } from 'react-router'
 import { MetaData } from '../components/MetaData'
 import { useDispatch, useSelector } from 'react-redux'
@@ -95,4 +95,5 @@ export const Application = () => {
         </>
     )
 }
+
 
