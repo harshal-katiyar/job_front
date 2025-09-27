@@ -41,8 +41,8 @@ export const EditUserAdmin = () => {
         <>
             <MetaData title="Edit User Role" />
             <div className='bg-gray-950 min-h-screen pt-14 md:px-20 px-3 text-white'>
-                {
-                    loading ? <Loader /> :
+                /* {
+                    loading ? <Loader /> : */
 
                         <div>
                             <div className="pt-1 fixed left-0 z-20 pl-0">
@@ -84,11 +84,12 @@ export const EditUserAdmin = () => {
                             </div>
 
                         </div>
-                }
+                
             </div>
 
 
         </>
     )
 }
+
 
