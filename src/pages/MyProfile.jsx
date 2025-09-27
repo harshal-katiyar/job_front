@@ -38,8 +38,8 @@ export const MyProfile = () => {
 
       <MetaData title="My Profile" />
       <div className='bg-gray-950 min-h-screen pt-14  md:px-20 px-3  text-white'>
-        {
-          loading ? <Loader /> :
+        /* {
+          loading ? <Loader /> : */
             <>
               <div className='text-left text-3xl  underL absolute   pl-4 underline-offset-8 md:pt-6 pt-3'>
                 <span className=' font-medium  '>My Profile</span>
@@ -124,7 +124,7 @@ export const MyProfile = () => {
 
 
 
-        }
+        
 
 
       </div>
@@ -132,6 +132,7 @@ export const MyProfile = () => {
     </>
   )
 }
+
 
 
 
