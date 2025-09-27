@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { MetaData } from '../components/MetaData'
-import { Loader } from '../components/Loader'
+//import { Loader } from '../components/Loader'
 import { useDispatch, useSelector } from 'react-redux'
 import { getSingleJob, saveJob } from '../actions/JobActions'
 import { BiBriefcase, BiBuildings, BiRupee } from 'react-icons/bi'
 import { AiOutlineSave } from 'react-icons/ai'
 import { HiStatusOnline } from 'react-icons/hi'
 import { BsPersonWorkspace, BsSend } from 'react-icons/bs'
-import { TbLoader2 } from 'react-icons/tb'
+//import { TbLoader2 } from 'react-icons/tb'
 import { useNavigate } from 'react-router'
 import {toast} from 'react-toastify'
 
@@ -170,5 +170,6 @@ export const JobDetails = () => {
     </>
   )
 }
+
 
 
