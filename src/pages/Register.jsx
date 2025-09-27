@@ -188,7 +188,7 @@ export const Register = () => {
 
               <div>
                 <button disabled={loading} className='blueCol flex justify-center items-center px-8 w-full py-2 font-semibold' >
-                  {loading ? <TbLoader2 className='animate-spin' size={24} /> : "Register"}</button>
+                  {loading  ?"Register": "Register"}</button>
               </div>
 
               <div className='text-center text-sm pt-2'>
@@ -208,4 +208,5 @@ export const Register = () => {
     </>
   )
 }
+
 
