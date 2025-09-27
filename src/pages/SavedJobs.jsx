@@ -37,7 +37,7 @@ export const SavedJobs = () => {
 <MetaData title="Saved Jobs" />
       <div className='bg-gray-950 min-h-screen pt-14 md:px-20 px-3  text-white'>
 
-            {loading ? <Loader/> :
+            /* {loading ? <Loader/> : */
               
               <div className='pt-6 md:px-28  px-1 pb-32' >
                   {savedJobs.length !== 0 && <div className='text-center text-3xl pb-4 font-medium'>Saved Jobs</div>}
@@ -63,7 +63,7 @@ export const SavedJobs = () => {
 
             </div>
             
-            }
+            
 
 
         </div>
@@ -72,4 +72,5 @@ export const SavedJobs = () => {
     </>
   )
 }
+
 
