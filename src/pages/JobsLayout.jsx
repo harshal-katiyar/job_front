@@ -80,7 +80,7 @@ export const JobsLayout = () => {
       <div className='bg-gray-950 min-h-screen pt-14 md:px-20 px-3  text-white'>
 
 
-        {loading ? <Loader /> :
+        /* {loading ? <Loader /> : */
           <>
             <div className='flex-col flex justify-center items-center w-full '>
               <div className='text-center pt-8 md:text-3xl text-2xl font-medium'>
@@ -196,7 +196,7 @@ export const JobsLayout = () => {
 
             </div>
           </>
-        }
+        
 
 
       </div>
@@ -204,6 +204,7 @@ export const JobsLayout = () => {
     </>
   )
 }
+
 
 
 
