@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Loader } from '../components/Loader'
+// import { Loader } from '../components/Loader'
 import { MetaData } from '../components/MetaData'
 import { AiOutlineMail } from 'react-icons/ai'
 import { MdPermIdentity, MdOutlineFeaturedPlayList } from 'react-icons/md'
@@ -97,7 +97,7 @@ export const EditProfile = () => {
             <div className='bg-gray-950 min-h-screen pt-14  md:px-20 px-3  text-white'>
 
 
-                {loading ? <Loader /> :
+                /* {loading ? <Loader /> : */
 
                     <div>
                         <div className=' flex justify-center w-full items-start pt-14'>
@@ -193,7 +193,7 @@ export const EditProfile = () => {
 
                     </div>
 
-                }
+                
 
 
             </div>
@@ -206,3 +206,4 @@ export const EditProfile = () => {
         </>
     )
 }
+
