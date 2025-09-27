@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { MetaData } from '../components/MetaData'
 import { useParams } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
-import { Loader } from '../components/Loader'
+//import { Loader } from '../components/Loader'
 import { toast } from 'react-toastify'
 import { getUserData, updateUser } from '../actions/AdminActions'
 import { Sidebar } from '../components/Sidebar'
@@ -91,3 +91,4 @@ export const EditUserAdmin = () => {
         </>
     )
 }
+
