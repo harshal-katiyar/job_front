@@ -44,16 +44,16 @@ export const Contact = () => {
             <Card
               title="Email"
               content={[
-                "General Inquiries: info@joblane.com",
-                "Support: support@joblane.com",
-                "Job Applications: jobs@joblane.com",
+                "General Inquiries: katiyarharshal@gmail.com",
+                "Support: katiyarsupport@gmail.com",
+                "Job Applications: katiyarjob@gmail.com",
               ]}
             />
             <Card
               title="Phone"
               content={[
-                "Customer Support: +123-456-7890",
-                "HR & Job Inquiries: +123-456-7891",
+                "Customer Support: +91 123-4656-789",
+                "HR & Job Inquiries: +91 123-4656-7891",
               ]}
             />
 
@@ -92,3 +92,4 @@ export const Contact = () => {
     </>
   );
 };
+
