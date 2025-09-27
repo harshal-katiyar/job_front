@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { MetaData } from '../components/MetaData'
-import { Loader } from '../components/Loader'
+//import { Loader } from '../components/Loader'
 import { useDispatch, useSelector } from 'react-redux'
 import { getSingleJob, saveJob } from '../actions/JobActions'
 import { BiBriefcase, BiBuildings, BiRupee } from 'react-icons/bi'
@@ -170,3 +170,4 @@ export const JobDetails = () => {
     </>
   )
 }
+
