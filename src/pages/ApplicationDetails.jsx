@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { MetaData } from '../components/MetaData'
 import { getSingleApplication } from '../actions/ApplicationActions'
 import { Link } from 'react-router-dom'
-import { TbLoader2 } from 'react-icons/tb'
+// import { TbLoader2 } from 'react-icons/tb'
 import {deleteApplication} from '../actions/ApplicationActions'
 import { useNavigate } from 'react-router'
 
@@ -73,12 +73,12 @@ export const ApplicationDetails = () => {
 
             <MetaData title="Application Details" />
             <div className='bg-gray-950 min-h-screen pt-14 md:px-20 px-3 text-white'>
-                {
+                /* {
                     loading ?
 
                         <Loader />
 
-                        :
+                        : */
 
                         <div>
                             <div className='py-3  text-2xl md:text-4xl'>Application #{id}</div>
@@ -137,8 +137,8 @@ export const ApplicationDetails = () => {
                                 </button>
                                     :
                                 <button className='bg-red-600 py-2   px-4 flex items-center font-bold justify-center '>
-
-                                    <TbLoader2 className='animate-spin mx-16' size={23} />
+                                        Delete Application
+                                    {/* <TbLoader2 className='animate-spin mx-16' size={23} /> */}
 
                                 </button>}
 
@@ -148,7 +148,7 @@ export const ApplicationDetails = () => {
 
 
                         </div>
-                }
+                
 
 
 
@@ -158,4 +158,5 @@ export const ApplicationDetails = () => {
         </>
     )
 }
+
 
