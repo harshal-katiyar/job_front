@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
-//import { Loader } from '../components/Loader'
+import { Loader } from '../components/Loader'
 import { MetaData } from '../components/MetaData'
 import { getSingleApplication } from '../actions/ApplicationActions'
 import { Link } from 'react-router-dom'
-// import { TbLoader2 } from 'react-icons/tb'
+import { TbLoader2 } from 'react-icons/tb'
 import {deleteApplication} from '../actions/ApplicationActions'
 import { useNavigate } from 'react-router'
 
@@ -158,5 +158,6 @@ export const ApplicationDetails = () => {
         </>
     )
 }
+
 
 
