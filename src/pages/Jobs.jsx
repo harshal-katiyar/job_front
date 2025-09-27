@@ -183,8 +183,8 @@ export const Jobs = () => {
       <div className='bg-gray-950 min-h-screen pt-14 sm:px-20 px-3  text-white'>
 
 
-        {loading ? <Loader /> :
-          <>
+        /* {loading ? <Loader /> :
+          <> */
             <div className='flex-col flex justify-center items-center w-full '>
               <div className='text-center pt-8 sm:text-3xl text-2xl font-medium'>
                 <p>Find your dream job now</p>
@@ -406,7 +406,7 @@ export const Jobs = () => {
 
             </div>
           </>
-        }
+        
 
 
       </div>
@@ -414,6 +414,7 @@ export const Jobs = () => {
     </>
   )
 }
+
 
 
 
