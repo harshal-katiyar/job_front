@@ -4,7 +4,7 @@ import { useParams } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAppData } from '../actions/AdminActions'
 import { Link } from 'react-router-dom'
-import { Loader } from '../components/Loader'
+// import { Loader } from '../components/Loader'
 import {toast} from 'react-toastify'
 import {updateApplication} from '../actions/AdminActions'
 import { Sidebar } from '../components/Sidebar'
@@ -77,12 +77,12 @@ export const EditAppAdmin = () => {
 
             <MetaData title="Update Application" />
             <div className='bg-gray-950 min-h-screen pt-14 md:px-20 px-3 text-white'>
-                {
+                /* {
                     loading ?
 
                         <Loader />
 
-                        :
+                        : */
 
                         <div>
                             <div className="pt-1 fixed left-0 z-20 pl-0">
@@ -166,7 +166,7 @@ export const EditAppAdmin = () => {
 
 
                         </div>
-                }
+                
 
 
 
@@ -177,3 +177,4 @@ export const EditAppAdmin = () => {
         </>
     )
 }
+
