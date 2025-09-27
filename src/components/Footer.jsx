@@ -78,12 +78,12 @@ export const Footer = () => {
             <Link
               target="_blank"
               className="underline text-blue-400"
-              to="https://sujal-tangde.netlify.app/"
+              to=""
             >
-              Sujal Tangde
+              
             </Link>
           </p>
-          <p className="text-sm"> &copy;Copyright, All rights reserved.</p>
+          <p className="text-sm"> &copy;Copyright, All rights reserved 2025.</p>
         </div>
 
         <div></div>
@@ -91,3 +91,4 @@ export const Footer = () => {
     </>
   );
 }
+
