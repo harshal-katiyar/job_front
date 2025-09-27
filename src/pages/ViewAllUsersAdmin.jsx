@@ -48,7 +48,8 @@ export const ViewAllUsersAdmin = () => {
       <MetaData title="All Users" />
       <div className='bg-gray-950 min-h-screen pt-14  md:px-20 px-3  text-white'>
 
-        {loading ? <Loader /> : <div>
+        /* {loading ? <Loader /> : */
+          <div>
 
           <div className="pt-1 fixed left-0 z-20 pl-0">
             <div onClick={(() => setSideTog(!sideTog))} className='cursor-pointer blueCol px-3 py-2' size={44} >
@@ -126,7 +127,7 @@ export const ViewAllUsersAdmin = () => {
           </div>
 
 
-        </div>}
+        </div>
 
       </div>
 
@@ -134,4 +135,5 @@ export const ViewAllUsersAdmin = () => {
     </>
   )
 }
+
 
