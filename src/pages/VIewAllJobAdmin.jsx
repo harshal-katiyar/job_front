@@ -5,7 +5,7 @@ import { MdOutlineModeEditOutline } from 'react-icons/md'
 import { AiOutlineDelete } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllJobsAdmin, deleteJobData } from '../actions/AdminActions'
-import { Loader } from '../components/Loader'
+//import { Loader } from '../components/Loader'
 import { RxCross1 } from 'react-icons/rx'
 import { Link } from 'react-router-dom'
 
@@ -142,3 +142,4 @@ export const ViewAllJobAdmin = () => {
     </>
   )
 }
+
