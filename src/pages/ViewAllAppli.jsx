@@ -5,7 +5,7 @@ import { MdOutlineModeEditOutline } from 'react-icons/md'
 import { AiOutlineDelete } from 'react-icons/ai'
 import {getAllAppAdmin, deleteApp} from '../actions/AdminActions'
 import {useDispatch, useSelector} from 'react-redux'
-import {Loader} from '../components/Loader'
+//import {Loader} from '../components/Loader'
 import { RxCross1 } from 'react-icons/rx'
 import { Link } from 'react-router-dom'
 
@@ -141,3 +141,4 @@ export const ViewAllAppli = () => {
     </>
   )
 }
+
