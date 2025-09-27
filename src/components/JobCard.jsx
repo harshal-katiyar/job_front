@@ -1,61 +1,72 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import useIsMobile from '../hooks/useIsMobile';
 
 export const JobCard = ({ job }) => {
-    const convertDateFormat = (inputDate) => {
-        const parts = inputDate.split('-');
-        if (parts.length !== 3) {
-            return "Invalid date format";
-        }
-        const [year, month, day] = parts;
-        return `${day}-${month}-${year}`;
-    };
+  const convertDateFormat = (inputDate) => {
+    const parts = inputDate.split('-');
+    if (parts.length !== 3) {
+      return 'Invalid date format';
+    }
+    const [year, month, day] = parts;
+    return `${day}-${month}-${year}`;
+  };
 
-    const isMobile = useIsMobile();
+  const isMobile = useIsMobile();
 
-    return (
-        <Link 
-            to={`/details/${job?._id}`} 
-            className="text-white flex flex-col gap-2 shadow-sm shadow-gray-800 border border-gray-700 md:px-4 px-3 w-full py-2"
-        >
-            <div className="flex gap-5 relative">
-                <div className="flex justify-center items-center">
-                    <img 
-                        src={job?.companyLogo?.url || "/default-logo.png"} 
-                        className="w-[4rem]" 
-                        alt="Company Logo" 
-                    />
-                </div>
-                <div className="flex flex-col">
-                    <div>
-                        <p className="md:text-xl text-lg">{job?.title || "Untitled Job"}</p>
-                    </div>
-                    <div className="flex justify-between gap-2">
-                        <div className="flex flex-col gap-1">
-                            <p className="text-sm">{job?.companyName || "Unknown Company"}</p>
-                            <p className="text-sm">{job?.exp || "N/A"}</p>
-                            {!isMobile && (
-                                <p className="text-sm flex">{job?.description?.slice(0, 64) || ""}...</p>
-                            )}
-                            <p className="text-sm flex md:hidden">
-                                {job?.description?.slice(0, 39) || ""}...
-                            </p>
-                        </div>
-                        <div className="absolute md:right-3 right-0 md:pt-0 top-3">
-                            <button className="blueCol font-semibold md:text-sm text-xs px-3 py-1">
-                                Apply
-                            </button>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <Link
+      to={`/details/${job?._id}`}
+      className="text-white flex flex-col gap-2 shadow-sm shadow-gray-800 border border-gray-700 md:px-4 px-3 w-full py-2"
+    >
+      <div className="flex gap-5 relative">
+        <div className="flex justify-center items-center">
+          <img
+            src={job?.companyLogo?.url || '/default-logo.png'}
+            className="w-[4rem]"
+            alt={job?.companyName || 'Company Logo'}
+          />
+        </div>
+        <div className="flex flex-col">
+          <div>
+            <p className="md:text-xl text-lg">{job?.title || 'Untitled Job'}</p>
+          </div>
+          <div className="flex justify-between gap-2">
+            <div className="flex flex-col gap-1">
+              <p className="text-sm">{job?.companyName || 'Unknown Company'}</p>
+              <p className="text-sm">{job?.exp || 'N/A'}</p>
+              {!isMobile && (
+                <p className="text-sm flex">
+                  {job?.description?.slice(0, 64) || ''}
+                  ...
+                </p>
+              )}
+              <p className="text-sm flex md:hidden">
+                {job?.description?.slice(0, 39) || ''}
+                ...
+              </p>
             </div>
-
-            <div className="flex md:gap-8 gap-3 md:text-sm text-xs">
-                <span>{convertDateFormat(String(job?.createdAt)?.slice(0, 10))}</span>
-                <span>{job?.employmentType || "N/A"}</span>
-                <span>{job?.location || "Unknown"}</span>
+            <div className="absolute md:right-3 right-0 md:pt-0 top-3">
+              <button
+                className="blueCol font-semibold md:text-sm text-xs px-3 py-1"
+                onClick={() => console.log('Apply clicked for', job?._id)}
+              >
+                Apply
+              </button>
             </div>
-        </Link>
-    );
+          </div>
+        </div>
+      </div>
+
+      <div className="flex md:gap-8 gap-3 md:text-sm text-xs">
+        <span>
+          {job?.createdAt
+            ? convertDateFormat(String(job.createdAt).slice(0, 10))
+            : 'Unknown Date'}
+        </span>
+        <span>{job?.employmentType || 'N/A'}</span>
+        <span>{job?.location || 'Unknown'}</span>
+      </div>
+    </Link>
+  );
 };
