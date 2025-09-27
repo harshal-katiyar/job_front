@@ -60,9 +60,9 @@ export const JobDetails = () => {
       <MetaData title="Job Details" />
       <div className='bg-gray-950 min-h-screen pt-14 md:px-20  text-white'>
 
-        {loading  ?
+        /* {loading  ?
           <Loader />
-          :
+          : */
 
           <>
 
@@ -135,7 +135,14 @@ export const JobDetails = () => {
                   }
                   
                   } className='  hover:bg-blue-600 md:text-lg text-sm font-bold px-10 py-1.5 bg-blue-800 flex items-center gap-1 '>
-                  {saveJobLoading ? <span className='animate-spin px-5'><TbLoader2 size={20}/></span> : 
+                  {saveJobLoading ?           <>
+                      <AiOutlineSave />
+                    {
+                  
+                      me.savedJobs && me.savedJobs.includes(jobDetails._id) ? "UnSave" : "Save"
+                    }
+                  </>
+                   : 
                   
                   <>
                       <AiOutlineSave />
@@ -159,7 +166,7 @@ export const JobDetails = () => {
 
           </>
 
-        }
+        
 
 
 
@@ -170,6 +177,7 @@ export const JobDetails = () => {
     </>
   )
 }
+
 
 
 
