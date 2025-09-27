@@ -3,7 +3,7 @@ import { MetaData } from '../components/MetaData'
 import { Sidebar } from '../components/Sidebar'
 import { MdOutlineLocationOn, MdOutlineFeaturedPlayList, MdOutlineWorkOutline, MdWorkspacesOutline, MdAttachMoney, MdOutlineReceiptLong } from 'react-icons/md'
 import { BiImageAlt } from 'react-icons/bi'
-import { TbLoader2 } from 'react-icons/tb'
+// import { TbLoader2 } from 'react-icons/tb'
 import { BiBuilding } from 'react-icons/bi'
 import { useDispatch, useSelector } from 'react-redux'
 import { createJobPost } from '../actions/JobActions'
@@ -249,7 +249,7 @@ export const CreateJob = () => {
               <div className='flex w-full'>
 
                 <button className='blueCol w-[20rem] justify-center items-center flex px-4 py-2'>
-                  {loading ? <TbLoader2 className='animate-spin' size={24} /> : "Post Job"}
+                  {loading ?  "Post Job"  : "Post Job"}
                 </button>
 
               </div>
@@ -416,7 +416,7 @@ export const CreateJob = () => {
 
               <div>
                 <button disabled={loading} className='blueCol flex justify-center items-center px-8 w-full py-2 font-semibold' >
-                  {loading ? <TbLoader2 className='animate-spin' size={24} /> : "Post Job"}</button>
+                  {loading ? "Post Job" : "Post Job"}</button>
               </div>
 
             </div>
@@ -434,3 +434,4 @@ export const CreateJob = () => {
     </>
   )
 }
+
