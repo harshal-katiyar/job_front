@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { MetaData } from '../components/MetaData'
 import { useDispatch, useSelector } from 'react-redux'
-import { Loader } from '../components/Loader'
+//import { Loader } from '../components/Loader'
 import { Link } from 'react-router-dom'
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button, Group } from '@mantine/core';
@@ -132,5 +132,6 @@ export const MyProfile = () => {
     </>
   )
 }
+
 
 
