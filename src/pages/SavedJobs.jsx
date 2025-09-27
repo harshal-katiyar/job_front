@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { MetaData } from '../components/MetaData'
 import {getSavedJobs} from '../actions/JobActions'
 import {useDispatch, useSelector} from 'react-redux'
-import {Loader} from '../components/Loader'
+//import {Loader} from '../components/Loader'
 import { SaveJobCard } from '../components/SaveJobCard'
 import {Link} from 'react-router-dom'
 
@@ -72,3 +72,4 @@ export const SavedJobs = () => {
     </>
   )
 }
+
