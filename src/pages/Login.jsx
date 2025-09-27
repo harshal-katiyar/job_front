@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { MetaData } from '../components/MetaData'
 import { AiOutlineMail, AiOutlineUnlock, AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
 import { Link, useNavigate } from 'react-router-dom'
-import { TbLoader2 } from 'react-icons/tb'
+//import { TbLoader2 } from 'react-icons/tb'
 import { loginUser } from '../actions/UserActions'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -95,4 +95,5 @@ export const Login = () => {
 
 
   )
+
 }
