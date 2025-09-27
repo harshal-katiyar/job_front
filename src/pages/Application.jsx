@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { TbLoader2 } from 'react-icons/tb'
-import { Loader } from '../components/Loader'
+// import { TbLoader2 } from 'react-icons/tb'
+// import { Loader } from '../components/Loader'
 import { useParams } from 'react-router'
 import { MetaData } from '../components/MetaData'
 import { useDispatch, useSelector } from 'react-redux'
@@ -76,15 +76,15 @@ export const Application = () => {
                         <p className='text-sm'>I confirm that all the information provided in this application is accurate and complete to the best of my knowledge. I understand that any false statements or omissions may result in disqualification from consideration or termination of application.</p>
                     </div>
                     <div className='pt-6 flex gap-3 pb-16'>
-                        
+                        {/* 
                        {loading?
                         <button onClick={makeApplication} disabled={true} className={`md:px-14 px-12 py-2.5  blueCol2`}>
                             <TbLoader2 className='animate-spin mx-[0.29em]  ' size={20}/>
                              </button>
-                        :
+                        : */}
                        <button onClick={makeApplication} disabled={!confirm} className={`md:px-10 px-8 py-2 ${confirm?"blueCol":"blueCol2"}`}>Confirm </button>
 
-                        } 
+                        {/* }  */}
                     </div>
                 </div>
 
@@ -95,3 +95,4 @@ export const Application = () => {
         </>
     )
 }
+
