@@ -25,8 +25,8 @@ export const AppliedJobs = () => {
 
 <MetaData title="Applied Jobs" />
       <div className='bg-gray-950 min-h-screen pt-14 md:px-20 px-3  text-white'>
-        {loading? 
-           <Loader/> :
+        /* {loading? 
+           <Loader/> : */
            <>
 
              <div className='pt-6 md:px-28 px-1 pb-32' >
@@ -56,7 +56,7 @@ export const AppliedJobs = () => {
             </div>
            
            </>
-       }
+
 
 
         </div>
@@ -65,4 +65,5 @@ export const AppliedJobs = () => {
     </>
   )
 }
+
 
