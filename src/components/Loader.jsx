@@ -1,6 +1,6 @@
 import React from 'react';
-import MetaData from '../components/MetaData'; // Make sure path is correct
-import Loader from '../components/Loader';     // Ensure this component exists
+import MetaData from '../components/MetaData'; // ✅ check path
+import Loader from '../components/Loader';     // ✅ check path
 
 export const SavedJobs = ({ savedJobs = [], loading }) => {
   return (
@@ -17,18 +17,23 @@ export const SavedJobs = ({ savedJobs = [], loading }) => {
               </div>
             )}
 
-            {/* Loop through savedJobs and display each job */}
             {savedJobs.length === 0 ? (
               <div className="text-center text-lg mt-10 text-gray-400">
                 No saved jobs found.
               </div>
             ) : (
               savedJobs.map((job, index) => (
-                <div key={job.id || index} className="mb-4 p-4 bg-gray-800 rounded">
-                  <h2 className="text-xl font-semibold">{job.title}</h2>
-                  <p className="text-gray-300">{job.company}</p>
-                  <p className="text-sm text-gray-400">{job.location}</p>
-                  {/* Add more job details or buttons if needed */}
+                <div key={job?._id || index} className="mb-4 p-4 bg-gray-800 rounded">
+                  <h2 className="text-xl font-semibold">
+                    {job?.title || "Untitled Job"}
+                  </h2>
+                  <p className="text-gray-300">
+                    {job?.companyName || "Unknown Company"}
+                  </p>
+                  <p className="text-sm text-gray-400">
+                    {job?.location || "Unknown Location"}
+                  </p>
+                  {/* ✅ You can also add Apply/View Details button */}
                 </div>
               ))
             )}
@@ -38,5 +43,3 @@ export const SavedJobs = ({ savedJobs = [], loading }) => {
     </>
   );
 };
-
-
