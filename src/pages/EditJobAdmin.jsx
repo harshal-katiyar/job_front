@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { MetaData } from '../components/MetaData'
 import { useParams } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
-import { Loader } from '../components/Loader'
+// import { Loader } from '../components/Loader'
 import { getJobData, updateJobData } from '../actions/AdminActions'
 import { Sidebar } from '../components/Sidebar'
 import { RxCross1 } from 'react-icons/rx'
 import { MdOutlineLocationOn, MdOutlineFeaturedPlayList, MdOutlineWorkOutline, MdWorkspacesOutline, MdAttachMoney, MdOutlineReceiptLong } from 'react-icons/md'
 import { BiImageAlt } from 'react-icons/bi'
-import { TbLoader2 } from 'react-icons/tb'
+// import { TbLoader2 } from 'react-icons/tb'
 import { BiBuilding } from 'react-icons/bi'
 import {toast} from 'react-toastify'
 
@@ -119,8 +119,8 @@ export const EditJobAdmin = () => {
 
             <MetaData title="Edit Job Details" />
             <div className='bg-gray-950 min-h-screen pt-14 md:px-20 px-3 text-white'>
-                {
-                    loading ? <Loader /> :
+                /* {
+                    loading ? <Loader /> : */
 
                         <div>
                             <div className="pt-1 fixed left-0 z-20 pl-0">
@@ -287,7 +287,7 @@ export const EditJobAdmin = () => {
                                         <div className='flex w-full'>
 
                                             <button onClick={()=>updateJobHandler()} className='blueCol w-[20rem] justify-center items-center flex px-4 py-2'>
-                                                {loading ? <TbLoader2 className='animate-spin' size={24} /> : "Edit Job"}
+                                                {loading ?  "Edit Job" : "Edit Job"}
                                             </button>
 
                                         </div>
@@ -456,7 +456,7 @@ export const EditJobAdmin = () => {
 
                                         <div>
                                             <button onClick={()=>updateJobHandler()} disabled={loading} className='blueCol flex justify-center items-center px-8 w-full py-2 font-semibold' >
-                                                {loading ? <TbLoader2 className='animate-spin' size={24} /> : 
+                                                {loading ? "Edit Job" : 
                                                 "Edit Job"}</button>
                                         </div>
 
@@ -469,7 +469,7 @@ export const EditJobAdmin = () => {
                             </div>
 
                         </div>
-                }
+                
 
             </div>
 
@@ -477,3 +477,4 @@ export const EditJobAdmin = () => {
         </>
     )
 }
+
